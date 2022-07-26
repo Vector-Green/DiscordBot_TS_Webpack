@@ -14,7 +14,7 @@ yarn build
 
 yarn start
 
-## To start development mode (same as you run yarn watch and yarn serve in parallel )
+## To start development mode (same as you would run `yarn watch` and `yarn serve` in parallel )
 
 yarn dev
 

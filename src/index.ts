@@ -15,11 +15,12 @@ const client = new discordJs.Client({
     discordJs.GatewayIntentBits.GuildMessages,
   ],
 });
+let superPuperVarName = 123362345326234235;
 
-console.log("Starting...");
+console.log("Starting..." + superPuperVarName);
 
 client.on("ready", () => {
-  console.log(`the bot is online!`);
+  console.log(`The Bot is online!`);
 });
 
 client.on("messageCreate", (message: Message) => {

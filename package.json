@@ -7,7 +7,7 @@
     "watch": "webpack-cli --watch --node-env development",
     "serve": "nodemon --exec yarn start",
     "build": "webpack-cli build --node-env production",
-    "start": "cross-env TOKEN=MTAwMDc4MTI2MDkyNDQwNzkzMA.GYRaHn.jamIp4NILkdQc3l7QPtxSUp2poz-n-nIBFbt8Q node build/index.js",
+    "start": "cross-env TOKEN=MTAwMDc4MTI2MDkyNDQwNzkzMA.GSLRbY.ug2S7XHeyPYAJP4-MObReILLxOwrcOsJgoHxws node build/index.js",
     "lint": "eslint"
   },
   "keywords": [],

@@ -89,6 +89,7 @@ module.exports = () => {
             exclude: undefined,
             parallel: true,
             minify: TerserPlugin.terserMinify,
+
             terserOptions: {
               ecma: 2016,
               enclose: false,
@@ -98,23 +99,24 @@ module.exports = () => {
                 shebang: true,
                 spidermonkey: false,
               },
+
               compress: {
                 defaults: true,
                 arrows: true,
                 arguments: true,
                 booleans: true,
-                booleans_as_integers: false,
+                //booleans_as_integers: true,  //! breaks if false
                 collapse_vars: true,
                 comparisons: true,
                 computed_props: true,
                 conditionals: true,
                 dead_code: true,
                 directives: true,
-                drop_console: false,
-                drop_debugger: false,
-                ecma: 2016,
+                // drop_console: true,
+                // drop_debugger: true,
+                ecma: "ESnext",
                 evaluate: true,
-                expression: false,
+                expression: true,
                 global_defs: {},
                 hoist_funs: true,
                 hoist_props: true,
@@ -122,12 +124,12 @@ module.exports = () => {
                 if_return: true,
                 inline: true,
                 join_vars: true,
-                keep_classnames: false,
+                keep_classnames: true, //! breaks if false
                 keep_fargs: false,
                 keep_fnames: false,
                 keep_infinity: false,
                 loops: true,
-                module: false,
+                module: true,
                 negate_iife: true,
                 passes: 10,
                 properties: true,
@@ -138,11 +140,11 @@ module.exports = () => {
                 sequences: true,
                 side_effects: true,
                 switches: true,
-                toplevel: false,
+                toplevel: true,
                 top_retain: null,
                 typeofs: true,
 
-                // unsafe: true, //!will break up
+                // unsafe: true,  //! breaks if true
                 unsafe_arrows: true,
                 unsafe_comps: true,
                 unsafe_Function: true,
@@ -162,8 +164,10 @@ module.exports = () => {
               toplevel: false,
               nameCache: null,
               ie8: false,
-              keep_classnames: undefined,
+
+              keep_classnames: true, //! breaks if false
               keep_fnames: false,
+
               safari10: false,
             },
             extractComments: false,
