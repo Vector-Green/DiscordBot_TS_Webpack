@@ -15,9 +15,8 @@ const client = new discordJs.Client({
     discordJs.GatewayIntentBits.GuildMessages,
   ],
 });
-let superPuperVarName = 123362345326234235;
 
-console.log("Starting..." + superPuperVarName);
+console.log("Starting...");
 
 client.on("ready", () => {
   console.log(`The Bot is online!`);
@@ -33,7 +32,4 @@ client.on("messageCreate", (message: Message) => {
   }
 });
 
-if (!process.env.TOKEN) {
-  throw new Error("You need to provide TOKEN to launch server");
-}
 client.login(process.env.TOKEN);

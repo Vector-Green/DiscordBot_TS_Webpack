@@ -144,7 +144,7 @@ module.exports = () => {
                 top_retain: null,
                 typeofs: true,
 
-                // unsafe: true,  //! breaks if true
+                unsafe: false, //! breaks if true
                 unsafe_arrows: true,
                 unsafe_comps: true,
                 unsafe_Function: true,
